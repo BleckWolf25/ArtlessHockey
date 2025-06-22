@@ -1,0 +1,46 @@
+# Unity-generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Visual Studio / VSCode
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# Unity cache and settings
+MemoryCaptures/
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+# Crash logs
+sysinfo.txt
+
+# Auto-generated files by Unity
+*.apk
+*.aab
+*.unitypackage
+*.ncb
+*.DS_Store
+
+# Mac system files
+.DS_Store
+Icon?
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# Other
+*.bak
+*.old
+*.orig

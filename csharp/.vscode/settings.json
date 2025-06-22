@@ -1,0 +1,428 @@
+{
+  // VS Code Settings Configuration for C# Projects
+
+  // === C# Language Server Configuration ===
+  "dotnet.server.useOmnisharp": false,
+  "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+  "dotnet.inlayHints.enableInlayHintsForParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForIndexerParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+  "dotnet.inlayHints.suppressInlayHintsForParametersThatDifferOnlyBySuffix": true,
+  "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchMethodIntent": true,
+  "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchArgumentName": true,
+
+  // === Code Analysis & Diagnostics ===
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+  "dotnet.codeLens.enableReferencesCodeLens": true,
+  "dotnet.navigation.navigateToDecompiledSources": true,
+  "dotnet.projects.binaryLogEnabled": false,
+
+  // === Code Formatting ===
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": null,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.trimAutoWhitespace": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+      "source.removeUnnecessaryImports": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[razor]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  "[xml]": {
+    "editor.defaultFormatter": null,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": null,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": null,
+    "editor.tabSize": 4
+  },
+
+  // === Editor Configuration ===
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.trimAutoWhitespace": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": true,
+  "editor.showFoldingControls": "always",
+  "editor.foldingStrategy": "indentation",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.minimap.maxColumn": 120,
+  "editor.scrollBeyondLastLine": false,
+
+  // === IntelliSense & Code Completion ===
+  "editor.suggest.insertMode": "replace",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.suggestSelection": "first",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  // === Code Actions & Refactoring ===
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnnecessaryImports": "explicit"
+  },
+  "editor.lightBulb.enabled": true,
+
+  // === File Associations ===
+  "files.associations": {
+    "*.cs": "csharp",
+    "*.csx": "csharp",
+    "*.cake": "csharp",
+    "*.cshtml": "razor",
+    "*.razor": "razor",
+    "*.vb": "vb",
+    "*.fs": "fsharp",
+    "*.fsx": "fsharp",
+    "*.fsi": "fsharp",
+    "*.ml": "fsharp",
+    "*.mli": "fsharp",
+    "*.csproj": "xml",
+    "*.vbproj": "xml",
+    "*.fsproj": "xml",
+    "*.sln": "plaintext",
+    "*.props": "xml",
+    "*.targets": "xml",
+    "*.config": "xml",
+    "*.nuspec": "xml",
+    "*.resx": "xml",
+    "*.settings": "xml",
+    "*.xaml": "xml",
+    "*.axml": "xml",
+    "*.plist": "xml",
+    "*.storyboard": "xml",
+    "*.asset": "yaml",
+    "*.meta": "yaml",
+    "*.prefab": "yaml",
+    "*.unity": "yaml"
+  },
+
+  // === File Exclusions ===
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/bin": false,
+    "**/obj": false,
+    "**/.vs": true,
+    "**/.vscode": false,
+    "**/node_modules": true,
+    "**/packages": false,
+    "**/*.user": true,
+    "**/*.userosscache": true,
+    "**/*.sln.docstates": true,
+    "**/TestResults": true,
+    "**/.nyc_output": true,
+    "**/coverage": true,
+    "**/*.lcov": true,
+    "**/.gitmodules": true,
+    "**/.vsconfig": true,
+    "**/*.booproj": true,
+    "**/*.pidb": true,
+    "**/*.suo": true,
+    "**/*.userprefs": true,
+    "**/*.unityproj": true,
+    "**/*.dll": true,
+    "**/*.exe": true,
+    "**/*.pdf": true,
+    "**/*.mid": true,
+    "**/*.midi": true,
+    "**/*.wav": true,
+    "**/*.gif": true,
+    "**/*.ico": true,
+    "**/*.jpg": true,
+    "**/*.jpeg": true,
+    "**/*.png": true,
+    "**/*.psd": true,
+    "**/*.tga": true,
+    "**/*.tif": true,
+    "**/*.tiff": true,
+    "**/*.3ds": true,
+    "**/*.3DS": true,
+    "**/*.fbx": true,
+    "**/*.FBX": true,
+    "**/*.lxo": true,
+    "**/*.LXO": true,
+    "**/*.ma": true,
+    "**/*.MA": true,
+    "**/*.obj": true,
+    "**/*.OBJ": true,
+    "**/*.asset": true,
+    "**/*.cubemap": true,
+    "**/*.flare": true,
+    "**/*.mat": true,
+    "**/*.meta": true,
+    "**/*.prefab": true,
+    "**/*.unity": true,
+    "build/": true,
+    "Build/": true,
+    "Library/": true,
+    "library/": true,
+    "obj/": true,
+    "Obj/": true,
+    "Logs/": true,
+    "logs/": true,
+    "ProjectSettings/": true,
+    "UserSettings/": true,
+    "temp/": true,
+    "Temp/": true
+  },
+
+  // === Search Configuration ===
+  "search.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true,
+    "**/packages": true,
+    "**/node_modules": true,
+    "**/*.lock": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/TestResults": true,
+    "**/coverage": true,
+    "**/.nyc_output": true
+  },
+
+  // === Testing Configuration ===
+  "dotnet.unitTests.runSettingsPath": "",
+  "dotnetTestExplorer.autoWatch": false,
+  "dotnetTestExplorer.enableTelemetry": false,
+  "dotnetTestExplorer.logpanel": true,
+  "dotnetTestExplorer.showCodeLens": true,
+  "dotnetTestExplorer.useTreeView": true,
+
+  // === Debugging Configuration ===
+  "debug.allowBreakpointsEverywhere": false,
+  "debug.inlineValues": "on",
+  "debug.toolBarLocation": "floating",
+  "debug.showInStatusBar": "onFirstSessionStart",
+  "debug.console.acceptSuggestionOnEnter": "off",
+
+  // === Terminal Configuration ===
+  "terminal.integrated.env.linux": {},
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.shell.windows": "pwsh.exe",
+
+  // === Git Configuration ===
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.allowForcePush": false,
+  "git.untrackedChanges": "mixed",
+  "git.ignoreLimitWarning": true,
+
+  // === NuGet Configuration ===
+  "nugetpackagemanagergui.nuget.searchPackage.defaultTake": 30,
+  "nugetpackagemanagergui.nuget.searchPackage.defaultSkip": 0,
+  "nugetpackagemanagergui.nuget.searchPackage.defaultIncludePrerelease": false,
+  "nugetpackagemanagergui.indentType": "Spaces",
+  "nugetpackagemanagergui.indentSize": 2,
+
+  // === SQL Server Configuration ===
+  "mssql.connections": [],
+  "mssql.enableConnectionPooling": true,
+  "mssql.maxRecentConnections": 25,
+  "mssql.showBatchTime": false,
+  "mssql.splitPaneSelection": "next",
+  "mssql.format.alignColumnDefinitionsInColumns": false,
+  "mssql.format.datatypeCasing": "none",
+  "mssql.format.keywordCasing": "none",
+  "mssql.format.placeCommasBeforeNextStatement": false,
+  "mssql.format.placeSelectStatementReferencesOnNewLine": false,
+
+  // === Web Development (ASP.NET Core) ===
+  "html.autoClosingTags": true,
+  "html.format.indentHandlebars": false,
+  "html.format.indentInnerHtml": false,
+  "html.format.maxPreserveNewLines": null,
+  "html.format.preserveNewLines": true,
+  "html.format.wrapLineLength": 120,
+  "html.suggest.html5": true,
+  "css.validate": true,
+  "less.validate": true,
+  "scss.validate": true,
+
+  // === Performance Optimization ===
+  "dotnet.server.trace": "off",
+  "files.watcherExclude": {
+    "**/bin/**": true,
+    "**/obj/**": true,
+    "**/.vs/**": true,
+    "**/packages/**": true,
+    "**/node_modules/**": true
+  },
+
+  // === Auto-save Configuration ===
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // === Problems Panel ===
+  "problems.decorations.enabled": true,
+  "problems.showCurrentInStatus": true,
+
+  // === Security & Trust ===
+  "security.workspace.trust.untrustedFiles": "prompt",
+  "security.workspace.trust.enabled": true,
+
+  // === Code Style & EditorConfig ===
+  "editorconfig.generateAuto": false,
+
+  // === Azure Integration ===
+  "azureResourceGroups.groupBy": "resourceType",
+  "azureFunctions.showCoreToolsWarning": true,
+  "azureFunctions.showPythonWarning": true,
+  "azureFunctions.requestTimeout": 15,
+
+  // === Docker Configuration ===
+  "docker.showStartPage": false,
+  "docker.defaultRegistryPath": "",
+  "docker.truncateLongRegistryPaths": false,
+  "docker.truncateMaxLength": 10,
+
+  // === Live Share Configuration ===
+  "liveshare.allowGuestDebugControl": false,
+  "liveshare.allowGuestTaskControl": false,
+  "liveshare.anonymousGuestApproval": "prompt",
+  "liveshare.guestApprovalRequired": false,
+
+  // === Productivity Features ===
+  "breadcrumbs.enabled": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "newUntitledFile",
+
+  // === Unity Game Development ===
+  "unity.enableLogging": true,
+  "unity.enableCodeCompletion": true,
+
+  // === MAUI/Xamarin Mobile Development ===
+  "dotnetMaui.debugHotReload": true,
+  "dotnetMaui.enablePreviewFeatures": false,
+
+  // === Code Spell Checker ===
+  "cSpell.enableFiletypes": [
+    "csharp",
+    "razor",
+    "json",
+    "jsonc",
+    "xml",
+    "yaml"
+  ],
+  "cSpell.words": [],
+
+  // === Extension-Specific Settings ===
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+
+  // === File Explorer & Nesting ===
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.sln": "*.csproj"
+  },
+
+  // === Dotnet Solution Default ===
+  "dotnet.defaultSolution": "ArtlessHockey.sln"
+}

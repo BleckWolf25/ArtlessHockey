@@ -1,0 +1,79 @@
+{
+  // VS Code Extensions Configuration for C# Projects
+  // File generated from DeveloperSet
+
+  "recommendations": [
+    // === Core C# Development ===
+    "ms-dotnettools.csharp",            // C# Dev Kit - Official Microsoft C# extension with IntelliSense
+    "ms-dotnettools.csdevkit",          // C# Dev Kit - Enhanced project management and debugging
+    "ms-dotnettools.vscode-dotnet-runtime", // .NET Install Tool - Manages .NET runtimes
+    "formulahendry.dotnet-test-explorer", // .NET Test Explorer - Visual test runner integration
+
+    // === Code Quality & Analysis ===
+    "sonarsource.sonarlint-vscode",     // SonarLint - Advanced code quality and security analysis
+    "ms-dotnettools.vscode-dotnet-pack", // .NET Extension Pack - Comprehensive tooling bundle
+    "icsharpcode.ilspy-vscode",         // ILSpy - .NET decompiler for assembly inspection
+    "jchannon.csharpextensions",        // C# Extensions - Additional IntelliSense and refactoring
+
+    // === Testing & Quality Assurance ===
+    "formulahendry.dotnet-test-explorer", // Test Explorer - Comprehensive test management
+    "bradgashler.htmltagwrap",          // HTML Tag Wrap - For Razor/Blazor development
+    "ms-vscode.test-adapter-converter", // Test Adapter - Universal test framework support
+
+    // === NuGet & Package Management ===
+    "jmrog.vscode-nuget-package-manager", // NuGet Package Manager - Visual package management
+    "aliasadidev.nugetpackagemanagergui", // NuGet GUI - Alternative package manager interface
+
+    // === Entity Framework & ORM ===
+    "ms-dotnettools.vscode-dotnet-pack", // Includes EF Core tools
+    "aliasadidev.nugetpackagemanagergui", // For EF packages management
+
+    // === API Development & Testing ===
+    "humao.rest-client",                // REST Client - API testing and development
+    "rangav.vscode-thunder-client",     // Thunder Client - Alternative API testing tool
+    "42crunch.vscode-openapi",          // OpenAPI - Swagger/OpenAPI specification support
+    "ms-vscode.vscode-yaml",            // YAML - Configuration files and OpenAPI specs
+
+    // === Version Control & Collaboration ===
+    "eamodio.gitlens",                  // GitLens - Advanced Git integration
+    "github.vscode-pull-request-github", // GitHub PRs - GitHub workflow integration
+    "github.copilot",                   // GitHub Copilot - AI-powered code assistance
+    "ms-vsliveshare.vsliveshare",       // Live Share - Real-time collaboration
+
+    // === Code Formatting & Style ===
+    "editorconfig.editorconfig",        // EditorConfig - Consistent coding styles
+    "esbenp.prettier-vscode",           // Prettier - JSON, YAML, and web file formatting
+    "ms-vscode.vscode-markdown",        // Markdown - Enhanced README and documentation
+
+    // === Performance & Profiling ===
+    "ms-dotnettools.vscode-dotnet-pack", // Includes performance profiling tools
+    "ms-vscode.hexeditor",              // Hex Editor - Binary analysis and debugging
+
+    // === Security & Compliance ===
+    "snyk-security.snyk-vulnerability-scanner", // Snyk - Vulnerability scanning
+    "github.vscode-github-actions",     // GitHub Actions - CI/CD workflow integration
+
+    // === Game Development (Unity) ===
+    "visualstudiotoolsforunity.vstuc",  // Visual Studio Tools for Unity
+    "tobiah.unity-tools",               // Unity Tools - Additional Unity integration
+
+    // === Documentation & Comments ===
+    "aaron-bond.better-comments",       // Better Comments - Enhanced comment styling
+    "streetsidesoftware.code-spell-checker", // Code Spell Checker - Documentation quality
+
+    // === Productivity & Navigation ===
+    "formulahendry.code-runner",        // Code Runner - Quick script execution
+    "alefragnani.bookmarks",            // Bookmarks - Code navigation enhancement
+    "oderwat.indent-rainbow",           // Indent Rainbow - Visual indentation guide
+  ],
+
+  // === Unwanted Extensions ===
+  // Extensions that might conflict with C# development workflow
+  "unwantedRecommendations": [
+    "rust-lang.rust-analyzer",          // Rust - Avoid language server conflicts
+    "ms-python.python",                 // Python - Prevent debugger conflicts
+    "ms-vscode.vscode-typescript-next", // TypeScript - May conflict with web debugging
+    "ms-vscode.vscode-java-pack",       // Java - Avoid JVM conflicts
+    "golang.go"                         // Go - Prevent language server interference
+  ]
+}
