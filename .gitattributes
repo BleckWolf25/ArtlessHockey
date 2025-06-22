@@ -1,0 +1,79 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Exclude large binary and build files from diff and text normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.tga binary
+*.tif binary
+*.tiff binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.fbx binary
+*.obj binary
+*.prefab binary
+*.unity binary
+*.asset binary
+*.mat binary
+*.dll binary
+*.exe binary
+*.so binary
+*.dylib binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+*.bin binary
+*.pdb binary
+*.mdb binary
+*.apk binary
+*.ipa binary
+*.aab binary
+*.keystore binary
+*.key binary
+*.pem binary
+*.crt binary
+*.cer binary
+*.pfx binary
+*.sln text eol=crlf
+*.cs text diff=csharp
+*.shader text
+*.cginc text
+*.hlsl text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.md text
+*.txt text
+*.csv text
+*.tsv text
+*.ini text
+*.bat text eol=crlf
+*.sh text eol=lf
+
+# Unity specific
+[Ll]ibrary/* filter=lfs diff=lfs merge=lfs -text
+[Tt]emp/* filter=lfs diff=lfs merge=lfs -text
+[Oo]bj/* filter=lfs diff=lfs merge=lfs -text
+[Bb]uild/* filter=lfs diff=lfs merge=lfs -text
+[Bb]uilds/* filter=lfs diff=lfs merge=lfs -text
+[Ll]ogs/* filter=lfs diff=lfs merge=lfs -text
+[Mm]emoryCaptures/* filter=lfs diff=lfs merge=lfs -text
+
+# Prevent git from treating these as text files
+*.unitypackage binary
