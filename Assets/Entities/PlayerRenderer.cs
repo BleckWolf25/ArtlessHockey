@@ -1,13 +1,16 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerRenderer : MonoBehaviour
 {
-    public float radius = 0.5f;
     public Color color = Color.white;
+    public float scale = 1f;
 
-    private void OnDrawGizmos()
+    private void Awake()
     {
-        Gizmos.color = color;
-        Gizmos.DrawSphere(transform.position, radius);
+        var sr = GetComponent<SpriteRenderer>();
+        sr.sprite = Resources.Load<Sprite>("CircleSprite");
+        sr.color = color;
+        transform.localScale = Vector3.one * scale;
     }
 }
