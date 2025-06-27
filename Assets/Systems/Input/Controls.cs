@@ -89,31 +89,62 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""25f80fe8-462a-46cd-9c60-8cfc670f9b50"",
+            ""id"": ""4266b5bb-e191-4700-be2d-4e9cec64650e"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""TouchPosition"",
                     ""type"": ""Value"",
-                    ""id"": ""002142fe-d91f-465b-a3bd-ca1d6e965911"",
+                    ""id"": ""267f16dc-2012-46cb-9952-56d81bd994e4"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Pause"",
+                    ""name"": ""TouchPress"",
                     ""type"": ""Button"",
-                    ""id"": ""63b354ec-e65d-4324-963f-051621c5555e"",
+                    ""id"": ""b22559c9-e9cb-4c04-9b19-c2e9c978a806"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""0c8d2f76-bf9e-489c-8661-87066bb4316c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
+                    ""name"": """",
+                    ""id"": ""4b1a7775-42e9-4e29-a801-c588ea22219c"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54a31c61-f958-4b3d-85b8-de1b63ce7813"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TouchPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""2D Vector"",
-                    ""id"": ""cf4ab370-82e3-4893-8740-2d404910a293"",
+                    ""id"": ""f6ba3595-690b-42d4-8725-9b923b1e5766"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -124,7 +155,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""24876c7b-5b9f-4402-b5a6-68a423eaaae0"",
+                    ""id"": ""d1fa70f0-16b3-461a-8e1c-d68419ab6f63"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -135,7 +166,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""ce78fd6b-dc0a-4672-aaa5-aae3f1fbdf5c"",
+                    ""id"": ""001918f5-acca-46a4-8b44-73103a2ae588"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -146,7 +177,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""b832f014-6e0d-4075-bbbe-d68e3e6fb472"",
+                    ""id"": ""cf554c8a-2a34-4edf-8de6-a47b1900ba54"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -157,7 +188,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""18378526-b9a1-48c5-bc17-9eb0120e653e"",
+                    ""id"": ""cb00cde8-8185-48e6-8d72-2142e84dce2b"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -168,7 +199,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""3774dc47-d839-4684-8885-2ec970bcf508"",
+                    ""id"": ""280b4947-0dc5-41d5-b981-aa2af7d9b1ee"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -179,8 +210,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""25b0d02f-d912-40b5-8306-1b49f193a9ca"",
-                    ""path"": ""<Joystick>/stick/up"",
+                    ""id"": ""4a7d1685-012c-4506-9544-0235ae653a81"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -190,8 +221,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""a88739b5-cf29-476b-be38-02b18d06e26e"",
-                    ""path"": ""<Joystick>/stick/down"",
+                    ""id"": ""20a6ebd7-8712-4ef0-a23c-35ac7df0d881"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -201,8 +232,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""7a87f865-a934-4bc7-bb97-b5a8daec2309"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""id"": ""c2bb9b13-9dc3-4d57-a5ad-93d2e6dbd683"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -212,8 +243,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""c5965caa-1bae-4bfe-b33f-a67ebbd45482"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""id"": ""dc711619-36e8-4a0e-92d1-41ca4393e9cc"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -223,7 +254,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""18d5a0e4-95c1-4c8b-830a-cd9dbfb8ff34"",
+                    ""id"": ""d7b0d5ce-8910-49fb-a551-15e7dd280fd7"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -234,8 +265,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""8377d900-b8e1-40f6-a936-9140cae46f57"",
-                    ""path"": ""<Touchscreen>/delta/up"",
+                    ""id"": ""17872074-3f75-4ba6-b17f-737de10bcbd8"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -245,8 +276,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""5a706779-7ad7-4806-9e95-1f9201f5f262"",
-                    ""path"": ""<Touchscreen>/delta/down"",
+                    ""id"": ""b045e85a-2b8e-4455-8f86-3ff6296c7fad"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -256,8 +287,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""a7dedbb1-5b5c-4d84-b206-5293abb63ea3"",
-                    ""path"": ""<Touchscreen>/delta/left"",
+                    ""id"": ""02a1143b-c614-498b-acf6-ce0d35ff7f8f"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -267,36 +298,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""e6b7d4d1-0785-4679-b178-2680e422e039"",
-                    ""path"": ""<Touchscreen>/delta/right"",
+                    ""id"": ""b46b33e2-14cb-44ff-b4a4-93defbc1a4cc"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f6c38aa0-545c-4f86-ade6-9d67049dce12"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4ab18dc8-e65a-4cce-ae1c-27446d2723bf"",
-                    ""path"": ""<Gamepad>/select"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -305,13 +314,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_TouchPosition = m_Player.FindAction("TouchPosition", throwIfNotFound: true);
+        m_Player_TouchPress = m_Player.FindAction("TouchPress", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     ~@Controls()
     {
-        UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, Controls.Player.Disable() has not been called.");
+        if (m_Player.enabled)
+            m_Player.Disable();
     }
 
     /// <summary>
@@ -387,8 +398,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_TouchPosition;
+    private readonly InputAction m_Player_TouchPress;
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Pause;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -401,13 +413,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// </summary>
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         /// <summary>
+        /// Provides access to the underlying input action "Player/TouchPosition".
+        /// </summary>
+        public InputAction @TouchPosition => m_Wrapper.m_Player_TouchPosition;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TouchPress".
+        /// </summary>
+        public InputAction @TouchPress => m_Wrapper.m_Player_TouchPress;
+        /// <summary>
         /// Provides access to the underlying input action "Player/Move".
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Pause".
-        /// </summary>
-        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -434,12 +450,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            @TouchPosition.started += instance.OnTouchPosition;
+            @TouchPosition.performed += instance.OnTouchPosition;
+            @TouchPosition.canceled += instance.OnTouchPosition;
+            @TouchPress.started += instance.OnTouchPress;
+            @TouchPress.performed += instance.OnTouchPress;
+            @TouchPress.canceled += instance.OnTouchPress;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Pause.started += instance.OnPause;
-            @Pause.performed += instance.OnPause;
-            @Pause.canceled += instance.OnPause;
         }
 
         /// <summary>
@@ -451,12 +470,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="PlayerActions" />
         private void UnregisterCallbacks(IPlayerActions instance)
         {
+            @TouchPosition.started -= instance.OnTouchPosition;
+            @TouchPosition.performed -= instance.OnTouchPosition;
+            @TouchPosition.canceled -= instance.OnTouchPosition;
+            @TouchPress.started -= instance.OnTouchPress;
+            @TouchPress.performed -= instance.OnTouchPress;
+            @TouchPress.canceled -= instance.OnTouchPress;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Pause.started -= instance.OnPause;
-            @Pause.performed -= instance.OnPause;
-            @Pause.canceled -= instance.OnPause;
         }
 
         /// <summary>
@@ -498,18 +520,25 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         /// <summary>
+        /// Method invoked when associated input action "TouchPosition" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTouchPosition(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TouchPress" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTouchPress(InputAction.CallbackContext context);
+        /// <summary>
         /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnPause(InputAction.CallbackContext context);
     }
 }

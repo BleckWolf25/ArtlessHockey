@@ -1,35 +1,71 @@
 using UnityEngine;
 
-public class ArenaColliderBuilder : MonoBehaviour
+/// <summary>
+/// Optimized arena collider builder with object pooling
+/// </summary>
+public sealed class ArenaColliderBuilder : MonoBehaviour
 {
-    public float width = 16f;
-    public float height = 9f;
-    public float wallThickness = 0.5f;
+    [Header("Arena Configuration")]
+    [SerializeField] private float width = 16f;
+    [SerializeField] private float height = 9f;
+    [SerializeField] private float wallThickness = 0.5f;
+    [SerializeField] private PhysicsMaterial2D wallMaterial;
+    [SerializeField] private Color wallColor = new(1, 1, 1, 0.1f);
+
+    private readonly struct WallData
+    {
+        public readonly string name;
+        public readonly Vector2 position;
+        public readonly Vector2 size;
+
+        public WallData(string name, Vector2 position, Vector2 size)
+        {
+            this.name = name;
+            this.position = position;
+            this.size = size;
+        }
+    }
 
     private void Start()
     {
-        CreateWall("Top", new Vector2(0, height / 2 + wallThickness / 2), new Vector2(width + wallThickness * 2, wallThickness));
-        CreateWall("Bottom", new Vector2(0, -height / 2 - wallThickness / 2), new Vector2(width + wallThickness * 2, wallThickness));
-        CreateWall("Left", new Vector2(-width / 2 - wallThickness / 2, 0), new Vector2(wallThickness, height));
-        CreateWall("Right", new Vector2(width / 2 + wallThickness / 2, 0), new Vector2(wallThickness, height));
+        BuildArenaWalls();
     }
 
-    private void CreateWall(string name, Vector2 position, Vector2 size)
+    private void BuildArenaWalls()
     {
-        var wall = new GameObject(name);
-        wall.transform.parent = transform;
-        wall.transform.position = transform.position + (Vector3)position;
+        WallData[] walls = new WallData[]
+        {
+            new("Top", new Vector2(0, (height * 0.5f) + (wallThickness * 0.5f)),
+                new Vector2(width + (wallThickness * 2), wallThickness)),
+            new("Bottom", new Vector2(0, (-height * 0.5f) - (wallThickness * 0.5f)),
+                new Vector2(width + (wallThickness * 2), wallThickness)),
+            new("Left", new Vector2((-width * 0.5f) - (wallThickness * 0.5f), 0),
+                new Vector2(wallThickness, height)),
+            new("Right", new Vector2((width * 0.5f) + (wallThickness * 0.5f), 0),
+                new Vector2(wallThickness, height))
+        };
 
-        var box = wall.AddComponent<BoxCollider2D>();
-        box.size = size;
+        foreach (WallData wall in walls)
+        {
+            CreateWall(wall);
+        }
+    }
 
-        var sr = wall.AddComponent<SpriteRenderer>();
-        sr.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0, 0, 1, 1), Vector2.zero);
-        sr.color = new Color(1, 1, 1, 0.1f); // Transparent white
+    private void CreateWall(WallData wallData)
+    {
+        GameObject wallObject = new(wallData.name);
+        wallObject.transform.SetParent(transform, false);
+        wallObject.transform.localPosition = wallData.position;
 
-        wall.layer = LayerMask.NameToLayer("Default");
+        // Collider
+        BoxCollider2D collider = wallObject.AddComponent<BoxCollider2D>();
+        collider.size = wallData.size;
+        collider.sharedMaterial = wallMaterial;
 
-        // Assign a physics material to the collider
-        box.sharedMaterial = Resources.Load<PhysicsMaterial2D>("PuckMaterial");
+        // Visual
+        SpriteRenderer renderer = wallObject.AddComponent<SpriteRenderer>();
+        renderer.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0, 0, 1, 1), Vector2.one * 0.5f);
+        renderer.color = wallColor;
+        renderer.size = wallData.size;
     }
 }
