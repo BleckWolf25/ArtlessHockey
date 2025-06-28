@@ -6,8 +6,8 @@ using UnityEngine;
 public sealed class ArenaColliderBuilder : MonoBehaviour
 {
     [Header("Arena Configuration")]
-    [SerializeField] private float width = 16f;
-    [SerializeField] private float height = 9f;
+    [SerializeField] private float width = 14.6f;
+    [SerializeField] private float height = 10f;
     [SerializeField] private float wallThickness = 0.5f;
     [SerializeField] private PhysicsMaterial2D wallMaterial;
     [SerializeField] private Color wallColor = new(1, 1, 1, 0.1f);

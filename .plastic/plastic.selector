@@ -1,0 +1,4 @@
+repository "ArtlessHockey 2025-06-22_18-21-25/ArtlessHockey@6872764160102@cloud"
+  path "/"
+    br "/main"
+    co "/main"

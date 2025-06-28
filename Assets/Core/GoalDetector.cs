@@ -5,6 +5,10 @@ public sealed class GoalDetector : MonoBehaviour
 {
     [SerializeField] private bool isPlayerGoal;
 
+    void Start() {
+        PuckController puck = FindFirstObjectByType<PuckController>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Puck"))
